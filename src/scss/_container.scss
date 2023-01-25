@@ -1,0 +1,12 @@
+.container{
+  background: $gray-background;
+  height: calc(100vh - 8vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1{
+    margin-bottom: 1rem;
+  }
+}

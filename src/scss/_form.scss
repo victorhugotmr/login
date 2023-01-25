@@ -1,0 +1,93 @@
+@import 'reset';
+@import 'animation';
+@import 'vars';
+
+
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid $gray-border;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  background: $white;
+  width: 400px;
+
+  div{
+    display: grid;
+  }
+
+  .password-container{
+    position: relative;
+    
+    
+    .toggle{
+      position: absolute;
+      padding: 2.5rem;
+      color: $gray-icon;
+      right: -1rem;
+      cursor: pointer;
+    }
+  }
+
+
+  input{
+    margin: .25rem 0 .75rem 0;
+    border: 1px solid ;
+    padding: 13px;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-top: .5rem;
+    padding: .95rem;
+    border: none;
+    background: $green-button;
+    color: $white;
+    font-weight: 700;
+    border-radius: 100px;
+    cursor: pointer;
+
+    
+  }
+
+  .disabled{
+    background: $gray-border;
+    cursor: default;
+  }
+
+  .correct{
+    border: 1px solid $green-button;
+
+  }
+
+  .error{
+    border: 1px solid $red;
+    animation: shake 150ms 2 linear;
+		  -moz-animation: shake 150ms 2 linear;
+		  -webkit-animation: shake 150ms 2 linear;
+		  -o-animation: shake 150ms 2 linear;
+  }
+
+  .error-message{
+    color: $red;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  .hidden{
+    display: none;
+  }
+}
